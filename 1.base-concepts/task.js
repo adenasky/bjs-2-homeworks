@@ -8,12 +8,12 @@ function solveEquation(a, b, c) {
 	if (discriminant < 0) {
 		arr = [];
 	} else if (discriminant === 0) {
-		const arr = -b / (2 * a);
+		const root = -b / (2 * a);
 		arr.push(root);
 	} else {
-		const arr1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-		const arr2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-		arr.push(arr1, arr2);
+		const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+		const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+		arr.push(root1, root2);
 	}
 
 	return arr;
