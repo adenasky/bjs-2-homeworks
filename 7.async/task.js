@@ -26,11 +26,11 @@ class AlarmClock {
     }
   
     getCurrentFormattedTime() {
-      const now = new Date();
-      let hours = now.getHours();
-      let minutes = now.getMinutes();
-      return `${hours}:${minutes}`;
-    }
+        const now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        return `${hours}:${minutes}`;
+      }
  
     start() {
       if (this.intervalId) {
